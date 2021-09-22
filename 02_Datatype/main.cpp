@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -33,8 +34,9 @@ int main(int argc, char** argv) {
     double d = 3.1425; // Size 8 bytes
 
     // User defined types
-    Day day = MON;
-    MyDay myday = day;
+    Day day = MON; // enum
+    MyDay myday = day; // typedef
+    string s; // class string
 
     // Derived Array variables
 

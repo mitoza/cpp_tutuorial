@@ -37,6 +37,8 @@ float areaOfCircle(int radius) {
 
 int main(int argc, char** argv) {
 
+    cout << "C++ Expressions" << endl;
+
     // Area of Triangle
     cout << "Area of triangle b=7, h=5: " << areaOfTriangle(7,5) << endl;
 
