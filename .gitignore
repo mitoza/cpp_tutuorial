@@ -1,0 +1,7 @@
+# CodeBlocks Project Output
+#*.cbp
+*.exe
+*.o
+*/obj/
+#*/bin/
+
