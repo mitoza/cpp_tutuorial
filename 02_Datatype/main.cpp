@@ -39,10 +39,19 @@ int main(int argc, char** argv) {
     string s; // class string
 
     // Derived Array variables
+    int A[] = {1,2,3};
+    int B[2][3] = {{1,2,3}, {4,5,6}};
 
     // Derived Pointer variables
+    int *p = A;
 
     // Derived Reference variables
+    int &y = i; // thin is an another name of variable i and it
+    cout << i << endl;
+    i++;
+    y++;
+    cout << i << endl;
+
 
     return 0;
 }

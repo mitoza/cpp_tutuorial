@@ -105,6 +105,8 @@ int main(int argc, char** argv) {
     cout << endl;
   }
 
+  // SizeOf array
+  cout << "Size of Array: " << sizeof(A) << " bytes" << endl;
 
   return 0;
 }
