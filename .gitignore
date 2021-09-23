@@ -2,6 +2,7 @@
 #*.cbp
 *.exe
 *.o
+*.depend
 */obj/
 #*/bin/
 
