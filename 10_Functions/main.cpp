@@ -54,6 +54,20 @@ int & getReference(int &x) {
   return x;
 }
 
+// Recursion function
+void resursion(int n) {
+  if (n > 0) {
+    resursion(n-1);
+    cout << n << ", ";
+  } else cout << endl;
+}
+
+// Pointer to function
+int funcPointer(int a) {
+  cout << "Pointer Function get " << a << endl;
+  return 0;
+}
+
 int main(int argc, char** argv) {
 
     cout << "C++ Functions" << endl;
@@ -103,6 +117,16 @@ int main(int argc, char** argv) {
     getReference(a) = 25;
     cout << "A: " << a << endl;
 
+    // Recursion
+    cout << "Recursion: ";
+    resursion(5);
+    cout << endl;
+
+    // Pointer to function
+    int (*fp)(int); // Declaration
+    fp = funcPointer; // Initialization
+    int result = (*fp)(a); // Call / Execution
+    cout << "Pointer Function result: " << result << endl;
 
     return 0;
 }
