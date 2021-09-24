@@ -23,8 +23,12 @@ int main(int argc, char** argv) {
 
     // Primitive integer variables
     int i = 1; // Size 2 bytes or 4 bytes
+    short sh = 13;
     char c = 65; // Size 1 byte
-    long int l;
+    long l;
+    unsigned int i1 = 1; // >=0
+    unsigned short sh1 = 1; // >=0
+    unsigned long l1 = 1; // >=0
 
     // Boolean
     bool b; // Size: unidentify
@@ -52,6 +56,11 @@ int main(int argc, char** argv) {
     y++;
     cout << i << endl;
 
+    // Type conversion
+    bool someBool1 = (bool)i; // method 1
+    bool someBool2 = bool(i); // method 2
+    bool someBool3 = static_cast<bool>(i); // method 3
+    long someLong = i; // Here we don't need type conversion
 
     return 0;
 }
