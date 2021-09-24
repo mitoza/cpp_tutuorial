@@ -15,6 +15,10 @@ union Tree {
 };
 
 class Playlist {
+private:
+public:
+  Playlist() {
+  }
 };
 
 int main(int argc, char** argv) {
