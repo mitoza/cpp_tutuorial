@@ -17,10 +17,6 @@ using namespace std;
 
 // Class declaration
 class Rectangle {
-private:
-  int length;
-  int breadth;
-
 public:
 // Constructors
 // 1. Default constructor
@@ -82,6 +78,10 @@ public:
   ~Rectangle() {
   }
 
+private:
+  int length;
+  int breadth;
+protected:s
 };
 
 // Deep Copy Constructor

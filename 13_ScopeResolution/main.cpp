@@ -4,10 +4,6 @@ using namespace std;
 
 // Class declaration
 class Rectangle {
-private:
-  int length;
-  int breadth;
-
 public:
   // Constructors
   Rectangle();
@@ -26,27 +22,37 @@ public:
   bool isSquare();
   // Destructor
   ~Rectangle();
-
+private:
+  int length;
+  int breadth;
+protected:
 };
 
 int main(int argc, char** argv) {
 
   cout << "C++ Scope Resolution" << endl;
 
-  Rectangle r(10,5);
+  Rectangle r(10,10);
   cout << "Area: " << r.area() << endl;
+  if (r.isSquare()) {
+    cout << "Rectangle is square." << endl;
+  }
 
   return 0;
 }
 
-Rectangle::Rectangle(int l=1, int b=1) {
-  length = l;
-  breadth = b;
+Rectangle::Rectangle(int length=1, int breadth=1) {
+  this->length = length;
+  this->breadth = breadth;
 }
 
 Rectangle::Rectangle(Rectangle &r) {
   length = r.length;
   breadth = r.breadth;
+}
+
+Rectangle::~Rectangle() {
+  cout << "Rectangle Destroyed" << endl;
 }
 
 void Rectangle::setLength(int l) {
@@ -71,6 +77,4 @@ bool Rectangle::isSquare() {
   return length == breadth;
 }
 
-Rectangle::~Rectangle() {
-  cout << "Rectangle Destroyed" << endl;
-}
+
