@@ -4,6 +4,9 @@ using namespace std;
 
 // Class declaration
 class Rectangle {
+private:
+  int length;
+  int breadth;
 public:
   // Constructors
   Rectangle();
@@ -22,9 +25,6 @@ public:
   bool isSquare();
   // Destructor
   ~Rectangle();
-private:
-  int length;
-  int breadth;
 protected:
 };
 
