@@ -8,6 +8,7 @@ void writeFile() {
   // Modes:
   // ios::app - append file
   // ios::trunc - truncate file
+  // ios::binary - binary file read
 
   ofstream ofs;
   ofs.write("my.txt", ios::trunc);
@@ -23,6 +24,7 @@ void readFile() {
 
   ifstream ifs;
   ifs.open("my.txt", ios::out); // file must be existing
+  // ifs.read() use for binary read
   if (!ifs.is_open()) {
     cout << "File not exists" << endl;
     return;
