@@ -77,5 +77,3 @@ int Rectangle::perimeter() {
 bool Rectangle::isSquare() {
   return length == breadth;
 }
-
-

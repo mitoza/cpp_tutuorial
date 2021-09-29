@@ -22,6 +22,9 @@ public:
   }
 };
 
+void func() {
+}
+
 int main(int argc, char** argv) {
 
     cout << "C++ Data Types" << endl;
@@ -30,13 +33,15 @@ int main(int argc, char** argv) {
     int i = 1; // Size 2 bytes or 4 bytes
     short sh = 13;
     char c = 65; // Size 1 byte
+    cout << "Char: " << CHAR_MIN << " " << CHAR_MAX << endl;
     long l;
-    unsigned int i1 = 1; // >=0
-    unsigned short sh1 = 1; // >=0
-    unsigned long l1 = 1; // >=0
+    cout << "Long: " << LONG_MIN << " " << LONG_MAX << endl;
 
     // Boolean
     bool b; // Size: unidentify
+
+    // Void
+    //void *prt = func();
 
     // Primitive floating point
     float f = 3.1425f; // Size 4 bytes
@@ -67,5 +72,27 @@ int main(int argc, char** argv) {
     bool someBool3 = static_cast<bool>(i); // method 3
     long someLong = i; // Here we don't need type conversion
 
+    cout << "Size of Integer: " << sizeof(i) << endl;
+
     return 0;
 }
+
+/*
+ * -------------------------------------------
+ * | Type      | Meaning       | Size        |
+ * -------------------------------------------
+ * | bool      | boolean       | undefined   |
+ * | char      | character     | 8-bit       |
+ * | wchar_t   | wide char     | 16-bits     |
+ * | char16_t  | unicode char  | 16-bits     |
+ * | char32_t  | unicode char  | 32-bits     |
+ * | short     | short int     | 16-bits     |
+ * | int       | integer       | 16-bits     |
+ * | long      | long int      | 32-bits     |
+ * | longlong  | very long int | 64-bits     |
+ * | float     | single-precisi| 32-bits     |
+ * | double    | double -||-   | 64-bits     |
+ * |long double| -""-          | 10/16-bytes  |
+ * -------------------------------------------
+*/
+
