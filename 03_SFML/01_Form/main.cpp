@@ -3,6 +3,7 @@
 // Source: https://habr.com/ru/post/248153/
 #include <iostream>
 
+#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
 const sf::Color white = sf::Color(255,255,255,255);
@@ -15,6 +16,11 @@ int main(int argc, char** argv) {
   sf::CircleShape shape(100.f);
   shape.setFillColor(sf::Color::Green);
 
+  sf::Music music;
+  if (music.openFromFile("c:\\cpp_tutuorial\\03_SFML\\bin\\Debug\\music.ogg")) {
+    music.play();
+  }
+
   while (window.isOpen())
   {
       sf::Event event;
@@ -23,7 +29,10 @@ int main(int argc, char** argv) {
           if (event.type == sf::Event::Closed)
               window.close();
       }
+
+      // Clear screen
       window.clear();
+
       window.draw(shape);
       //window.draw(image);
       window.display();
