@@ -16,10 +16,12 @@ int main(int argc, char** argv) {
   sf::CircleShape shape(100.f);
   shape.setFillColor(sf::Color::Green);
 
+
   sf::Music music;
-  if (music.openFromFile("c:\\cpp_tutuorial\\03_SFML\\bin\\Debug\\music.ogg")) {
+  if (music.openFromFile("c:\\cpp_tutuorial\\03_SFML\\09_Sound\\resources\\orchestral.ogg")) {
     music.play();
   }
+
 
   while (window.isOpen())
   {
