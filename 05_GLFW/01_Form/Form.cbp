@@ -2,22 +2,23 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="SDL_OpenGL" />
+		<Option title="Form" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/SDL_OpenGL" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Form" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option parameters="first second third" />
 				<Compiler>
+					<Add option="-std=c++17" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/SDL_OpenGL" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Form" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -32,19 +33,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="C:/Cpp/SDL2-2.0.16/include" />
-			<Add directory="C:/Cpp/OpenGL/glew/include" />
+			<Add directory="../glfw/include" />
+			<Add directory="../glew/include" />
 		</Compiler>
 		<Linker>
 			<Add library="opengl32" />
 			<Add library="glu32" />
 			<Add library="gdi32" />
-			<Add library="C:/Cpp/OpenGL/glew/lib/libglew32.dll.a" />
-			<Add library="C:/Cpp/SDL2-2.0.16/x86_64-w64-mingw32/lib/libSDL2.a" />
-			<Add library="C:/Cpp/SDL2-2.0.16/x86_64-w64-mingw32/lib/libSDL2main.a" />
-			<Add library="C:/Cpp/SDL2-2.0.16/x86_64-w64-mingw32/lib/libSDL2.dll.a" />
-			<Add directory="C:/Cpp/SDL2-2.0.16/x86_64-w64-mingw32/lib" />
-			<Add directory="C:/Cpp/OpenGL/glew/lib" />
+			<Add library="../glfw/lib/libglfw3dll.a" />
+			<Add library="../glew/lib/libglew32.dll.a" />
+			<Add directory="../glfw/src" />
+			<Add directory="../glew/lib" />
 		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions />

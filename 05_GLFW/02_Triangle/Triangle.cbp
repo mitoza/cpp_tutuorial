@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="GLFW_GLEW" />
+		<Option title="Triangle" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/GLFW_GLEW" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Triangle" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -15,16 +15,10 @@
 				<Compiler>
 					<Add option="-std=c++17" />
 					<Add option="-g" />
-					<Add directory="C:/Cpp/OpenGL/glfw/include" />
-					<Add directory="C:/Cpp/OpenGL/glew/include" />
 				</Compiler>
-				<Linker>
-					<Add directory="C:/Cpp/OpenGL/glfw/src" />
-					<Add directory="C:/Cpp/OpenGL/glew/lib" />
-				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/GLFW_GLEW" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Triangle" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -39,13 +33,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../glfw/include" />
+			<Add directory="../glew/include" />
 		</Compiler>
 		<Linker>
 			<Add library="opengl32" />
 			<Add library="glu32" />
 			<Add library="gdi32" />
-			<Add library="C:/Cpp/OpenGL/glfw/src/libglfw3dll.a" />
-			<Add library="C:/Cpp/OpenGL/glew/lib/libglew32.dll.a" />
+			<Add library="../glfw/lib/libglfw3dll.a" />
+			<Add library="../glew/lib/libglew32.dll.a" />
+			<Add directory="../glfw/src" />
+			<Add directory="../glew/lib" />
 		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions />
