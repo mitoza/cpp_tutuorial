@@ -142,12 +142,12 @@ int main(int argc, char** argv) {
     triangleShader.use();
 
     // Transformation create
-    glm::mat4 transf = glm::mat4(1.0f);
-    transf = glm::translate(transf, glm::vec3(0.5f, -0.5f, 0.0f));
-    transf = glm::rotate(transf, (GLfloat)glfwGetTime() * -1.0f, glm::vec3(0.0f, 0.0f, 1.0f));
+    glm::mat4 transform(1.0f);
+    transform = glm::translate(transform, glm::vec3(0.25f, -0.25f, 0.0f));
+    transform = glm::rotate(transform, (GLfloat)glfwGetTime() * -5.0f, glm::vec3(0.0f, 0.0f, 1.0f));
     // Apply transformation
     GLint transformLocation = glGetUniformLocation(triangleShader.Program, "transform");
-    glUniformMatrix4fv(transformLocation, 1, GL_FALSE, glm::value_ptr(transf)); // 4 float variables
+    glUniformMatrix4fv(transformLocation, 1, GL_FALSE, glm::value_ptr(transform)); // 4 float variables
 
 
     // Draw Shader
