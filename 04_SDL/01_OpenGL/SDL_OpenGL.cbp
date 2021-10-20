@@ -32,19 +32,19 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="C:/Cpp/SDL2-2.0.16/include" />
-			<Add directory="C:/Cpp/OpenGL/glew/include" />
+			<Add directory="../../05_GLFW/glew/include" />
+			<Add directory="C:/cpp/MinGW/include" />
 		</Compiler>
 		<Linker>
 			<Add library="opengl32" />
 			<Add library="glu32" />
 			<Add library="gdi32" />
-			<Add library="C:/Cpp/OpenGL/glew/lib/libglew32.dll.a" />
-			<Add library="C:/Cpp/SDL2-2.0.16/x86_64-w64-mingw32/lib/libSDL2.a" />
-			<Add library="C:/Cpp/SDL2-2.0.16/x86_64-w64-mingw32/lib/libSDL2main.a" />
-			<Add library="C:/Cpp/SDL2-2.0.16/x86_64-w64-mingw32/lib/libSDL2.dll.a" />
-			<Add directory="C:/Cpp/SDL2-2.0.16/x86_64-w64-mingw32/lib" />
-			<Add directory="C:/Cpp/OpenGL/glew/lib" />
+			<Add library="C:/cpp/MinGW/lib/libSDL2.a" />
+			<Add library="C:/cpp/MinGW/lib/libSDL2main.a" />
+			<Add library="C:/cpp/MinGW/lib/libSDL2.dll.a" />
+			<Add library="../../05_GLFW/glew/lib/libglew32.dll.a" />
+			<Add directory="../../05_GLFW/glew/lib" />
+			<Add directory="C:/cpp/MinGW/lib" />
 		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions />

@@ -59,10 +59,17 @@ int main(int argc, char** argv) {
   Shader triangle("res/shaders/core.vs", "res/shaders/core.frag");
 
   // Create Vertex Data
+  /*
   GLfloat vertices[] = {
-    -0.5f, -0.5f, 0.0f, /* Bottom Left */ 1.0f, 0.0f, 0.0f, /* red color*/
-    0.5f, -0.5f, 0.0f,  /* Bottom Right */ 0.0f, 1.0f, 0.0f, /* green color */
-    0.0f, 0.5f, 0.0f, /* Top Middle */ 0.0f, 0.0f, 1.0f /* blue color */
+    -0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,// Bottom Left
+    0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f, // Bottom Right
+    0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f // Top Middle
+  };
+  */
+  GLfloat vertices[] = {
+    -1.0f, -1.0f, 0.0f, /* Bottom Left */ 1.0f, 0.0f, 0.0f, /* red color*/
+    1.0f, -1.0f, 0.0f,  /* Bottom Right */ 0.0f, 1.0f, 0.0f, /* green color */
+    0.0f, 1.0f, 0.0f, /* Top Middle */ 0.0f, 0.0f, 1.0f /* blue color */
   };
 
   // Create VBO(Vertex Buffer Object) and VAO(Vertex Array Object)

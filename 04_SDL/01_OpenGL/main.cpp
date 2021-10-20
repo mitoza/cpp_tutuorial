@@ -3,11 +3,11 @@
 
 #include <GL/glew.h>
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include <GL/gl.h>
 
-#include <SDL_opengl.h>
+#include <SDL2/SDL_opengl.h>
 
 const GLint WIDTH = 800;
 const GLint HEIGHT = 600;
