@@ -5,15 +5,17 @@
 
 #include <GLFW/glfw3.h>
 
-#ifdef _WIN32
-#include <windows.h>
-#endif
-
 #include <GL/gl.h>
 
 #include "headers/Shader.h"
 
 #include <SOIL2/SOIL2.h>
+
+#define GLM_FORCE_MESSAGES
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 
 // http://www.opengl-tutorial.org/
 
@@ -138,6 +140,15 @@ int main(int argc, char** argv) {
 
     // Draw Triangle
     triangleShader.use();
+
+    // Transformation create
+    glm::mat4 transf = glm::mat4(1.0f);
+    transf = glm::translate(transf, glm::vec3(0.5f, -0.5f, 0.0f));
+    transf = glm::rotate(transf, (GLfloat)glfwGetTime() * -1.0f, glm::vec3(0.0f, 0.0f, 1.0f));
+    // Apply transformation
+    GLint transformLocation = glGetUniformLocation(triangleShader.Program, "transform");
+    glUniformMatrix4fv(transformLocation, 1, GL_FALSE, glm::value_ptr(transf)); // 4 float variables
+
 
     // Draw Shader
     glActiveTexture(GL_TEXTURE0);
