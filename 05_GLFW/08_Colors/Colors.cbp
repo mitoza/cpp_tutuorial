@@ -2,13 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Camera" />
+		<Option title="Colors" />
 		<Option pch_mode="2" />
-		<Option default_target="Release" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Camera" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Colors" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -20,12 +19,10 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Camera" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Colors" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option host_application="Camera.exe" />
-				<Option run_host_application_in_terminal="0" />
 				<Compiler>
 					<Add option="-O2" />
 				</Compiler>
@@ -35,7 +32,7 @@
 			</Target>
 			<Target title="Windows">
 				<Option platforms="Windows;" />
-				<Option output="bin/Windows/Camera" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Windows/Colors" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Windows/.objs" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -62,8 +59,10 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="res/images/image1.jpg" />
 		<Unit filename="res/images/image2.png" />
-		<Unit filename="res/shaders/core.frag" />
-		<Unit filename="res/shaders/core.vs" />
+		<Unit filename="res/shaders/lighting.frag" />
+		<Unit filename="res/shaders/lighting.vs" />
+    <Unit filename="res/shaders/lamp.frag" />
+		<Unit filename="res/shaders/lamp.vs" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="1" />
