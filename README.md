@@ -10,6 +10,12 @@ IDE: [Code Blocks]
 [TutorialsPoint.com] - C++ tutorials
 
 
+### JOSN
+
+[Nlohmann JSON library] - used for small configuration json files with [Nlohmann Json tutorial]
+
+[taoJSON library] - used for large REST encoded json responses
+
 
    [cppreference.com]: <https://en.cppreference.com/>
    
@@ -18,3 +24,10 @@ IDE: [Code Blocks]
    [TutorialsPoint.com]: <https://www.tutorialspoint.com/cplusplus/>
    
    [Code Blocks]: <https://www.codeblocks.org/>
+
+
+   [Nlohmann JSON library]: <https://github.com/nlohmann/json>
+   
+   [Nlohmann Json tutorial]: <https://habr.com/ru/company/infopulse/blog/254075/>
+   
+   [taoJSON library]: <https://github.com/taocpp/json>

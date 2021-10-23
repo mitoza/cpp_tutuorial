@@ -24,21 +24,22 @@ uniform Material material;
 uniform Light light;
 
 void main() {
-  // ambient lighting / general lighting
+  // ambient lighting / general lighting // Окружающий свет
   vec3 ambient = light.ambient * material.ambient;
 
-  // defuse lighting / direct light
+  // defuse lighting / direct light // Рассеивание
   vec3 norm = normalize(Normal);
   vec3 lightDir = normalize(light.position - FragPos);
   float diff = max(dot(norm, lightDir), 0.0f); // dot() - dot product
   vec3 diffuse = light.diffuse * (diff * material.diffuse);
 
-  // specular lighting / little shiny light
+  // specular lighting / little shiny light // Зеркальный свет
   vec3 viewDir = normalize(viewPos - FragPos);
   vec3 reflectDir = reflect(-lightDir, norm);
   float spec = pow(max(dot(viewDir, reflectDir), 0.0f), material.shininess);
   vec3 specular = light.specular * (spec * material.specular);
 
+  // Combined (Phong)
   vec3 result = ambient + diffuse + specular;
   color = vec4(result, 1.0f);
 }
