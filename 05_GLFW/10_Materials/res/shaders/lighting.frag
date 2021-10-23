@@ -27,7 +27,7 @@ void main() {
   // ambient lighting / general lighting // Окружающий свет
   vec3 ambient = light.ambient * material.ambient;
 
-  // defuse lighting / direct light // Рассеивание
+  // diffuse lighting / direct light // Рассеивание
   vec3 norm = normalize(Normal);
   vec3 lightDir = normalize(light.position - FragPos);
   float diff = max(dot(norm, lightDir), 0.0f); // dot() - dot product

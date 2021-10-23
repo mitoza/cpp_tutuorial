@@ -2,12 +2,13 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Materials" />
+		<Option title="LightingMap" />
 		<Option pch_mode="2" />
+		<Option default_target="Windows" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Materials" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/LightingMap" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -19,7 +20,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Materials" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/LightingMap" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -32,7 +33,7 @@
 			</Target>
 			<Target title="Windows">
 				<Option platforms="Windows;" />
-				<Option output="bin/Windows/Materials" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Windows/LightingMap" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Windows/.objs" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -57,10 +58,16 @@
 		<Unit filename="headers/Camera.h" />
 		<Unit filename="headers/Shader.h" />
 		<Unit filename="main.cpp" />
+    <Unit filename="res/images/container2.png" />
+    <Unit filename="res/images/container2_specular.png" />
+    <Unit filename="res/images/container2_specular2.png" />
+    <Unit filename="res/images/image1.jpg" />
+    <Unit filename="res/images/image2.png" />
+    <Unit filename="res/images/image3.png" />
+		<Unit filename="res/shaders/lamp.frag" />
+		<Unit filename="res/shaders/lamp.vs" />
 		<Unit filename="res/shaders/lighting.frag" />
 		<Unit filename="res/shaders/lighting.vs" />
-    <Unit filename="res/shaders/lamp.frag" />
-		<Unit filename="res/shaders/lamp.vs" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="1" />
