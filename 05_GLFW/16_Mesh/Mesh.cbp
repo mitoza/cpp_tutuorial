@@ -57,6 +57,8 @@
 			<Add library="libassimp" />
 		</Linker>
 		<Unit filename="headers/Camera.h" />
+		<Unit filename="headers/Mesh.h" />
+		<Unit filename="headers/Model.h" />
 		<Unit filename="headers/Shader.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="res/images/container2.png" />
@@ -65,10 +67,32 @@
 		<Unit filename="res/images/image1.jpg" />
 		<Unit filename="res/images/image2.png" />
 		<Unit filename="res/images/image3.png" />
+		<Unit filename="res/models/arm_dif.png" />
+		<Unit filename="res/models/arm_showroom_ddn.png" />
+		<Unit filename="res/models/arm_showroom_spec.png" />
+		<Unit filename="res/models/body_dif.png" />
+		<Unit filename="res/models/body_showroom_ddn.png" />
+		<Unit filename="res/models/body_showroom_spec.png" />
+		<Unit filename="res/models/glass_ddn.png" />
+		<Unit filename="res/models/glass_dif.png" />
+		<Unit filename="res/models/hand_dif.png" />
+		<Unit filename="res/models/hand_showroom_ddn.png" />
+		<Unit filename="res/models/hand_showroom_spec.png" />
+		<Unit filename="res/models/helmet_diff.png" />
+		<Unit filename="res/models/helmet_showroom_ddn.png" />
+		<Unit filename="res/models/helmet_showroom_spec.png" />
+		<Unit filename="res/models/leg_dif.png" />
+		<Unit filename="res/models/leg_showroom_ddn.png" />
+		<Unit filename="res/models/leg_showroom_spec.png" />
+		<Unit filename="res/models/nanosuit.blend" />
+		<Unit filename="res/models/nanosuit.mtl" />
+		<Unit filename="res/models/nanosuit.obj" />
 		<Unit filename="res/shaders/lamp.frag" />
 		<Unit filename="res/shaders/lamp.vs" />
 		<Unit filename="res/shaders/lighting.frag" />
 		<Unit filename="res/shaders/lighting.vs" />
+		<Unit filename="res/shaders/modelLoading.frag" />
+		<Unit filename="res/shaders/modelLoading.vs" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="1" />

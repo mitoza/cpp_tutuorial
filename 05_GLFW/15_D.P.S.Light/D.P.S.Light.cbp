@@ -8,7 +8,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/D.P.S" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/D.P" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -20,7 +20,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/D.P.S" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/D.P" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -33,7 +33,7 @@
 			</Target>
 			<Target title="Windows">
 				<Option platforms="Windows;" />
-				<Option output="bin/Windows/D.P.S" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Windows/D.P" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Windows/.objs" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -54,7 +54,7 @@
 			<Add library="glew32" />
 			<Add library="libsoil2" />
 			<Add library="libglm_static" />
-			<Add library="libassimp" />
+			<Add library="libassimp.dll" />
 		</Linker>
 		<Unit filename="headers/Camera.h" />
 		<Unit filename="headers/Shader.h" />
