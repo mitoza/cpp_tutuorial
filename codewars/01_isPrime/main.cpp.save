@@ -50,24 +50,21 @@ bool isPrime(int num) {
   for(int a=r; a > 1; a--) {
       if (GCD(a, num) != 1) return false;
   };
-
+  
   // 5.
   int endOfA = sqrt(EulerPhi(r)) * log2(num);
   cout << "EndOfA: " << endOfA << endl;
   for(int a=1; a<endOfA; a++) {
 
   }
-  // http://yves.gallot.pagesperso-orange.fr/src/aks.html
-  /*
+
   P<x> := PolynomialRing(IntegerRing(n));
   for a := 1 to Floor(2*Sqrt(r)*logn) do
       if Modexp(x - a, n, x^r - 1) ne x^(n mod r) - a then
           return false;
       end if;
   end for;
-  */
-  // https://www.geeksforgeeks.org/aks-primality-test/
-
+  
 
   // Old Method
   /*
