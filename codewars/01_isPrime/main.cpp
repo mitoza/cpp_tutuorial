@@ -68,6 +68,8 @@ bool isPrime(int num) {
   */
   // https://www.geeksforgeeks.org/aks-primality-test/
 
+  // Also check https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test
+
 
   // Old Method
   /*
