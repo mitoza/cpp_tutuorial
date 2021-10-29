@@ -1,5 +1,6 @@
 // main.cpp
 #include <iostream>
+#include <string>
 #include <math.h>
 
 using namespace std;
@@ -66,9 +67,7 @@ bool isPrime(int num) {
       end if;
   end for;
   */
-  // https://www.geeksforgeeks.org/aks-primality-test/
 
-  // Also check https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test
 
 
   // Old Method
@@ -109,6 +108,102 @@ int EulerPhi(unsigned int n) {
   return result;
 }
 
+bool IsPrime(int n){
+	if (n < 2) return false;
+	if (n < 4) return true;
+	if (n % 2 == 0) return false;
+
+	const int iMax = (int)sqrt(n) + 1;
+	int i;
+	for (i = 3; i <= iMax; i += 2)
+		if (n % i == 0)
+			return false;
+
+	return true;
+}
+
+
+// Miller Robin Prime Test  https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test
+int power(int x, unsigned int y, int p){
+    int res = 1;      // Initialize result
+    x = x % p;  // Update x if it is more than or
+                // equal to p
+    while (y > 0)
+    {
+        // If y is odd, multiply x with result
+        if (y & 1)
+            res = (res*x) % p;
+
+        // y must be even now
+        y = y>>1; // y = y/2
+        x = (x*x) % p;
+    }
+    return res;
+}
+
+bool miillerTest(int d, int n){
+    // Pick a random number in [2..n-2]
+    // Corner cases make sure that n > 4
+    int a = 2 + rand() % (n - 4);
+
+    // Compute a^d % n
+    int x = power(a, d, n);
+
+    if (x == 1  || x == n-1)
+       return true;
+
+    // Keep squaring x while one of the following doesn't
+    // happen
+    // (i)   d does not reach n-1
+    // (ii)  (x^2) % n is not 1
+    // (iii) (x^2) % n is not n-1
+    while (d != n-1)
+    {
+        x = (x * x) % n;
+        d *= 2;
+
+        if (x == 1)      return false;
+        if (x == n-1)    return true;
+    }
+    // Return composite
+    return false;
+}
+
+bool isPrimeMiller(int num){
+    int k = 5;
+    if (num <= 1 || num == 4)  return false;
+    if (num <= 3) return true;
+
+    // Find r such that n = 2^d * r + 1 for some r >= 1
+    int d = num - 1;
+    while (d % 2 == 0)
+        d /= 2;
+    cout << "D: " << d << " N: " << num << endl;
+    // Iterate given number of 'k' times
+    for (int i = 0; i < k; i++)
+         if (!miillerTest(d, num))
+              return false;
+
+    return true;
+}
+
+/* // My PrimeTest
+bool isPrime(int num) {
+  if (num <= 1) return false;
+  if (num == 2 || num == 3) return true;
+  if (num % 2 == 0) return false;
+  if (num % 3 == 0) return false;
+  if (num > 5 && num % 5 == 0) return false;
+  if (num > 7 && num % 7 == 0) return false;
+  int i=sqrt(num);
+  while (i < num/2) {
+    if (num % i == 0) return false;
+    i++;
+  }
+  return true;
+}
+*/
+
 void mainTest() {
     cout << "0: " << (isPrime(0) ? "-" : "+") << endl;
     cout << "1: " << (isPrime(1) ? "-" : "+") << endl;
@@ -140,10 +235,10 @@ int main(int argc, char** argv) {
 
     //mainTest();
     //cout << "5099: " << (isPrime(5099) ? "+" : "-") << endl;
-    cout << "31: " << (isPrime(31) ? "+" : "-") << endl;
+    //cout << "31: " << (isPrime(31) ? "+" : "-") << endl;
     //largeTest();
 
-    cout << "PowMod 2 5 13: " << powmod(2,5, 13) << endl;
+    //cout << "PowMod 2 5 13: " << powmod(2,5, 13) << endl;
     //cout << "GCD(29,31): " << GCD(12,30) << endl;
     //cout << "EulerPhi(36): " << EulerPhi(36) << endl;
 
