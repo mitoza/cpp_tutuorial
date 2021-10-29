@@ -107,7 +107,7 @@ void stringClass() {
   str.replace(5, 2, " W");
   showStringInfo(str);
 
-  // Replace
+  // Erase
   cout << "Erase. ";
   str.erase(); // The same as clear()
   showStringInfo(str);
